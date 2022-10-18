@@ -25,7 +25,7 @@ const dataSErver = () => {
 
   return (
     <>
-      <div className="text-center">
+      <div className=" bg-dark text-white text-center p-6">
         <h1>Fetch Data from Server</h1>
         <div>
           {data.slice(0, 5).map((ele) => {
