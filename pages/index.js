@@ -1,5 +1,6 @@
 import Link from "next/link";
-
+import Image from "next/image";
+import Logo from "../public/wolf.jpg";
 import "bootstrap/dist/css/bootstrap.css";
 // import dataSErver from "./dataSErver";
 
@@ -27,7 +28,7 @@ export default function Home() {
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <ul class="navbar-nav me-auto mt-2 mb-lg-0">
                 <li class="nav-item">
                   <Link href="/Home">
                     <a class="nav-link active" aria-current="page">
@@ -67,6 +68,9 @@ export default function Home() {
             </div>
           </div>
         </nav>
+      </div>
+      <div>
+        <Image src={Logo} alt="Picture of the author" priority />
       </div>
     </>
   );
