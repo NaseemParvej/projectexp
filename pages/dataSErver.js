@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
 const dataSErver = () => {
   const [data, setData] = useState([
@@ -26,17 +27,28 @@ const dataSErver = () => {
   return (
     <>
       <div className=" bg-dark text-white text-center p-6">
-        <h1>Fetch Data from Server</h1>
+        <h1 className="text-primary">Fetch Data from Server</h1>
         <div>
           {data.slice(0, 5).map((ele) => {
             return (
-              <div key={ele.id}>
+              <div
+                className="border border-info rounded-3 text-info"
+                key={ele.id}
+              >
                 <h5>{ele.id}</h5>
                 <p>{ele.title}</p>
               </div>
             );
           })}
         </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <Link href="/">
+          <a class=" rounded-2 bg-info text-dark border border-dark">
+            click to Main Page
+          </a>
+        </Link>
       </div>
     </>
   );

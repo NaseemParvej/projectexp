@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 const Blog = () => {
   return (
     <div>
@@ -9,6 +9,14 @@ const Blog = () => {
         cupiditate assumenda fuga accusamus debitis ipsam dignissimos, provident
         unde! Quas, saepe!
       </p>
+
+      <div class="text-center mt-4">
+        <Link href="/">
+          <a class=" rounded-2 bg-info text-dark border border-dark">
+            click to Main Page
+          </a>
+        </Link>
+      </div>
     </div>
   );
 };

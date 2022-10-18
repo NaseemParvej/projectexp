@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <div className="text-align-centre">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark  sticky-top">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
               <span className="fs-2" style={{ color: "red" }}>

@@ -66,6 +66,14 @@ function About() {
           </div>
         </div>
       </nav>
+
+      <div class="text-center mt-4">
+        <Link href="/">
+          <a class=" rounded-2 bg-info text-dark border border-dark">
+            click to Main Page
+          </a>
+        </Link>
+      </div>
     </>
   );
 }
