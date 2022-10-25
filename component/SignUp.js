@@ -59,7 +59,7 @@ function SignUp() {
         <div className=" row mt-5">
           <div className="col-6">
             <h2 className="mb-3 text-center ">Sign Up</h2>
-            <Form>
+            <Form className="mt-6  bg-info rounded-4 p-5 m-5">
               <Form.Group className="mb-3" controlId="formBasicName">
                 <Form.Control
                   type="text"
@@ -105,7 +105,7 @@ function SignUp() {
                 Submit
               </Button>
             </Form>
-            <p className="mt-3">
+            <p className="mt-3 m-lg-5">
               Already have an Account{" "}
               <span className="text-outline-primary">
                 <Link
@@ -115,7 +115,7 @@ function SignUp() {
                   //   query: { component: "SignIn" },
                   // }}
                 >
-                  SignIn
+                  <u> SignIn</u>
                 </Link>
               </span>
             </p>
@@ -131,7 +131,7 @@ function SignUp() {
               </Link>
             </p> */}
           </div>
-          <div className="col-6">
+          <div className="col-6 ">
             <Img />
           </div>
         </div>

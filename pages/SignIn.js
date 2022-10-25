@@ -70,8 +70,8 @@ function SignIn() {
       <div className="container">
         <div className="row mt-3">
           <div className="col-6 mt-5">
-            <h3 className="mb-3 text-center">Sign In</h3>
-            <Form>
+            <h3 className="mb-3 text-center">Login In</h3>
+            <Form className="mt-6 bg-info rounded-4 p-5 m-5">
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control
                   type="email"
@@ -106,7 +106,7 @@ function SignIn() {
               </Button>
             </Form>
           </div>
-          <div className="col-6 mb-2">
+          <div className="col-6 ">
             <Img />
           </div>
         </div>

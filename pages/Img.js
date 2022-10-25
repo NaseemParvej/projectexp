@@ -10,8 +10,8 @@ const Img = () => {
           src={logoimg}
           alt="Picture of the author"
           width="30px"
-          height="30px"
-          layout="fixed"
+          height="20px"
+          layout="responsive"
         />
       </div>
     </>

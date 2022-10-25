@@ -8,9 +8,9 @@ const BackgroundImg = () => {
       <Image
         className="bg-success"
         src={sp2}
+        // width="100%"
+        // height="70%"
         alt="Picture of the author"
-        width="100%"
-        height="100%"
         layout="responsive"
       />
     </div>
