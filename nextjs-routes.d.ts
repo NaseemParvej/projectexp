@@ -6,13 +6,19 @@
 declare module "nextjs-routes" {
   export type Route =
     | { pathname: "/About"; query?: Query | undefined }
-    | { pathname: "/api/hello"; query?: Query | undefined }
+    | { pathname: "/api/blogs"; query?: Query | undefined }
+    | { pathname: "/api/getblog"; query?: Query | undefined }
+    | { pathname: "/api"; query?: Query | undefined }
     | { pathname: "/BackgroundImg"; query?: Query | undefined }
     | { pathname: "/Blog"; query?: Query | undefined }
+    | { pathname: "/blogpost/how-to-know-me"; query?: Query | undefined }
+    | { pathname: "/blogpost/[slug]"; query: Query<{ "slug": string }> }
     | { pathname: "/dataSErver"; query?: Query | undefined }
     | { pathname: "/Home"; query?: Query | undefined }
     | { pathname: "/Img"; query?: Query | undefined }
     | { pathname: "/"; query?: Query | undefined }
+    | { pathname: "/post"; query?: Query | undefined }
+    | { pathname: "/post/[postid]"; query: Query<{ "postid": string }> }
     | { pathname: "/Registation"; query?: Query | undefined }
     | { pathname: "/SignIn"; query?: Query | undefined };
 

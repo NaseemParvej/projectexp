@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import Detail from "../component/Detail";
 import Navbar from "../component/Navbar";
 import BackgroundImg from "./BackgroundImg";
+import Blog from "./Blog";
 // import SignUp from "../component/SignUp";
 // import SignIn from "./SignIn";
 
@@ -18,6 +19,7 @@ export default function Home() {
         {/* <SignIn /> */}
         {/* <Detail /> */}
         <BackgroundImg />
+        {/* <Blog /> */}
       </div>
     </>
   );

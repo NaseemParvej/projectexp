@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Badge from "react-bootstrap/Badge";
+import ListGroup from "react-bootstrap/ListGroup";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/button";
 import Container from "react-bootstrap/Container";
@@ -8,6 +10,19 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
 const Blog = () => {
+  const [blog, setblog] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/api/blogs")
+      .then((a) => {
+        return a.json();
+      })
+      .then((parsed) => {
+        setblog(parsed);
+        console.log(parsed);
+      });
+  }, []);
+
   return (
     <div>
       <h1>Blog</h1>
@@ -30,6 +45,40 @@ const Blog = () => {
           </Form>
         </Container>
       </Navbar>
+
+      <div className="mt-4 list-group">
+        <h1>Latest Blogs</h1>
+        <ListGroup as="ol" numbered>
+          <ListGroup.Item
+            as="li"
+            className=" d-flex justify-content-between align-items-start"
+          >
+            <div className="ms-2 me-auto">
+              <div className="fw-bold">
+                {blog.map((ele) => {
+                  return (
+                    <>
+                      <div key={ele.slug}>
+                        <Link href={`./blogpost/${ele.slug}`}>
+                          <h3>{ele.title}</h3>
+                        </Link>
+                        <p>{ele.content.substr(0, 120)}</p>
+                      </div>
+                    </>
+                  );
+                })}
+              </div>
+            </div>
+            <Badge bg="primary" pill>
+              14
+            </Badge>
+          </ListGroup.Item>
+        </ListGroup>
+      </div>
+
+      <br />
+
+      <div></div>
 
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus
